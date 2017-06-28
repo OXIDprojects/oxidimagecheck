@@ -1,6 +1,6 @@
 # Oxid Imagecheck
 
-Check Image-Directories from OXID-Esales for availability and needlessness of images
+Check Image-Directories from OXID eShop for availability and needlessness of images
 
 [![Code Climate](https://codeclimate.com/github/re4jh/oxidimagecheck/badges/gpa.svg)](https://codeclimate.com/github/re4jh/oxidimagecheck)
 [![Issue Count](https://codeclimate.com/github/re4jh/oxidimagecheck/badges/issue_count.svg)](https://codeclimate.com/github/re4jh/oxidimagecheck)
