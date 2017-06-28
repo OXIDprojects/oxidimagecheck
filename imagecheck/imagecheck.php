@@ -10,7 +10,7 @@
 
 // Load OXID Configuration 
 
-class OXID_Config
+class OxidConfig
 {
     public function __construct()
     {
@@ -19,7 +19,7 @@ class OXID_Config
 }
 
 // Get Config for Database-Connection
-$src_shop = new OXID_Config();
+$src_shop = new OxidConfig();
 
 // Connect to Database
 $mysqli = new mysqli($src_shop->dbHost, $src_shop->dbUser, $src_shop->dbPwd, $src_shop->dbName);
