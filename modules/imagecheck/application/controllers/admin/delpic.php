@@ -1,8 +1,10 @@
 <?php
+
 /* Filename: delpic.php
  * Feature: Find/Remove unused/unavailable product- and category images
  * Authors : jonas.hess@revier.de, info@foxido.de
  */
+
 class delpic extends oxAdminDetails
 {
 
@@ -58,8 +60,10 @@ class delpic extends oxAdminDetails
             }
             $aNotFound = array_diff($aImgFilesArticles, $aFoundMaster);
             if (count($aNotFound) > 0) {
-                echo "Not found Article-Master in $imgdir :\n";
-                var_dump($aNotFound);
+                oxRegistry::get("oxUtilsView")->addErrorToDisplay("Not found Article-Master in $imgdir :\n");
+                foreach ($aNotFound as $notFoundItem) {
+                    oxRegistry::get("oxUtilsView")->addErrorToDisplay("- $notFoundItem \n");
+                }
             }
         }
 
