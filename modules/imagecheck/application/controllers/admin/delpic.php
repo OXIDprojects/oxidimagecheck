@@ -29,7 +29,6 @@ class delpic extends oxAdminDetails
             // Generated Pictures
             $imgdir = $myConfig->getPictureDir(false) . 'generated/product/' . $i . '/';
             $sub_dirs = glob($imgdir . '*', GLOB_ONLYDIR);
-            $aFoundGenerated = Array();
             foreach ($sub_dirs as $sub_dir) {
                 $files = array_filter(glob($sub_dir . '/*'), 'is_file');
                 foreach ($files as $file) {
