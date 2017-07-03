@@ -135,8 +135,10 @@ class delpic extends oxAdminDetails
         }
         $aNotFound = array_diff($aImgFilesCatIcons, $aFoundCatIcon);
         if (count($aNotFound) > 0) {
-            echo "\nNot found Icon in $imgdir :\n";
-            var_dump($aNotFound);
+            oxRegistry::get("oxUtilsView")->addErrorToDisplay("Not found Icon in $imgdir :\n");
+            foreach ($aNotFound as $notFoundItem) {
+                oxRegistry::get("oxUtilsView")->addErrorToDisplay("- $notFoundItem \n");
+            }
         }
 
         //Category Promo Icons
@@ -164,8 +166,10 @@ class delpic extends oxAdminDetails
         }
         $aNotFound = array_diff($aImgFilesCatPromo, $aFoundCatPromo);
         if (count($aNotFound) > 0) {
-            echo "\nNot found Promo-Icon in $imgdir :\n";
-            var_dump($aNotFound);
+            oxRegistry::get("oxUtilsView")->addErrorToDisplay("Not found Promo-Icon in $imgdir :\n");
+            foreach ($aNotFound as $notFoundItem) {
+                oxRegistry::get("oxUtilsView")->addErrorToDisplay("- $notFoundItem \n");
+            }
         }
 
     }
