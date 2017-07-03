@@ -17,18 +17,16 @@
     <input type="hidden" name="cl" value="delpic">
     <input type="hidden" name="fnc" value="delipic">
     <div class="form">
-        <tr>
-            <td class="edittext"><b>autodelete</b></td>
-            <td class="edittext" style="text-align:left;">
-                <input class="edittext" type="checkbox" name="autodelete" value='1' [{ $readonly }]>
-            </td>
-        </tr>
-        <tr>
-            <td class="edittext" colspan="1">
-                <input class="edittext" type="submit" [{$readonly}] value="check or delete useless pics">
-            </td>
-        </tr>
-
+        <br />
+        <input class="edittext" type="checkbox" name="autodelete" value='1' [{ $readonly }]>
+        <b>Delete unneccesary images automatically.</b>
+        <br /><br />
+        <i>Be careful! This module thinks not beeing used means not beeing referenced by any categories or products.</i><br />
+        <i>If you use images of your category and product-image directories elswhere (e.g. in other content elements, blogs, ...),</i><br />
+        <i>automatically deleting them is not a wise decision.</i>
+        <br />
+        <br />
+        <input class="edittext" type="submit" [{$readonly}] value="check or delete useless pics">
     </div>
 </form>
 
