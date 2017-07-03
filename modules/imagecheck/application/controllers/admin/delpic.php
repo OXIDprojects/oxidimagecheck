@@ -18,8 +18,8 @@ class delpic extends oxAdminDetails
         $oDb = oxDb::getDb(oxDB::FETCH_MODE_ASSOC);
         for ($i = 1; $i <= 12; $i++) {
             $aImgFilesArticles = Array();
-            $sql_select = 'SELECT DISTINCT OXPIC' . $i . ' FROM oxarticles WHERE OXPIC' . $i . ' != "";';
-            $result = $oDb->getAll($sql_select);
+            $sqlSelect = 'SELECT DISTINCT OXPIC' . $i . ' FROM oxarticles WHERE OXPIC' . $i . ' != "";';
+            $result = $oDb->getAll($sqlSelect);
             foreach ($result as $row) {
                 $aImgFilesArticles[] = $row['OXPIC' . $i];
             }
