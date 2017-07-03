@@ -28,9 +28,9 @@ class delpic extends oxAdminDetails
 
             // Generated Pictures
             $imgdir = $myConfig->getPictureDir(false) . 'generated/product/' . $i . '/';
-            $sub_dirs = glob($imgdir . '*', GLOB_ONLYDIR);
-            foreach ($sub_dirs as $sub_dir) {
-                $files = array_filter(glob($sub_dir . '/*'), 'is_file');
+            $subDirs = glob($imgdir . '*', GLOB_ONLYDIR);
+            foreach ($subDirs as $subDir) {
+                $files = array_filter(glob($subDir . '/*'), 'is_file');
                 foreach ($files as $file) {
                     if (!in_array(basename($file), $aImgFilesArticles) && basename($file) != 'nopic.jpg') {
                         oxRegistry::get("oxUtilsView")->addErrorToDisplay('Obsolete File found: ' . $file);
