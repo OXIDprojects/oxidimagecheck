@@ -103,8 +103,10 @@ class delpic extends oxAdminDetails
         }
         $aNotFound = array_diff($aImgFilesCatThumbs, $aFoundCatThumb);
         if (count($aNotFound) > 0) {
-            echo "\nNot found Thumbnail in $imgdir :\n";
-            var_dump($aNotFound);
+            oxRegistry::get("oxUtilsView")->addErrorToDisplay("Not found Thumbnail in $imgdir :\n");
+            foreach ($aNotFound as $notFoundItem) {
+                oxRegistry::get("oxUtilsView")->addErrorToDisplay("- $notFoundItem \n");
+            }
         }
 
         //Category Icons
