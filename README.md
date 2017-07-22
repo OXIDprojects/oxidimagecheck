@@ -2,14 +2,11 @@
 
 Check Image-Directories from OXID eShop for availability and needlessness of images.
 
-Installation
+Credits
 ----------------
-
- 1. Upload the file *imagecheck.php* in its folder *imagecheck* to your webroot.
- 2. Open *www.yourdomain.com/imagecheck/imagecheck.php*
- 3. If you use *...imagecheck.php?autodelete=true* not needed images are deleted automatically. (Be careful!)
+* I created this script under GPLv3.0 as a little standalone tool.
+* foxido.de helped me to make a real tiny module out of my codelines.
  
-
 ----------
 
 [![Code Climate](https://codeclimate.com/github/re4jh/oxidimagecheck/badges/gpa.svg)](https://codeclimate.com/github/re4jh/oxidimagecheck)
